@@ -6,12 +6,14 @@
         int n = Convert.ToInt32(Console.ReadLine());
         int [] arr = new int[n];
         int result = 0;
+        
         Console.WriteLine("Заполните массив: ");
         for (int i = 0; i < arr.Length; i++)
         {
             arr[i] = Convert.ToInt32(Console.ReadLine());
         }
         Console.Write("Введённый массив: ");
+        
         for (int i = 0; i < arr.Length; i++)
         {
             Console.Write("{0} ",arr[i]);
@@ -24,6 +26,14 @@
                 result +=1;
             }
         }
-        Console.WriteLine("\nКоличество чисел > 0 : {0}", result);
+
+
+        if (result>0)
+        {
+           Console.WriteLine("\nКоличество чисел > 0 : {0}", result); 
+        }else{
+        
+        Console.WriteLine("\nСреди введённого множества, нет чисел > 0 ");
+        }
     }
 }
